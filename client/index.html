@@ -9,12 +9,17 @@
     .bot { color: blue; margin: 0.25rem 0; }
     .user { color: green; margin: 0.25rem 0; }
   </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1>Copilot Chat</h1>
-  <div id="chat"></div>
-  <input id="input" placeholder="Type a message" style="width:360px;" />
-  <button id="send">Send</button>
+  <div id="app" class="m-4 p-3 w-[800px] relative">
+    <h1 class="text-2xl font-bold mb-2">Copilot Chat</h1>
+    <div id="chat" class="w-full"></div>
+    <div class="mt-4">
+      <input id="input" placeholder="Type a message" class="border shadow rounded px-4 py-2" />
+      <button id="send" class="border border-green-400 bg-green-300 hover:bg-green-200 rounded shadow px-4 py-2">Send</button>
+    </div>
+  </div>
 
   <script>
     const API_BASE = 'http://localhost:3001';
